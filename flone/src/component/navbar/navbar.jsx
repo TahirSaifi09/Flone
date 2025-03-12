@@ -26,7 +26,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <div className="w-full flex px-20 items-center justify-between gap-4 py-8">
+    <div className="w-full flex px-20 bg-white fixed z-10 items-center justify-between gap-4 py-8">
       <img src="logo.png" alt="logo" />
       <div className="flex gap-8 ">
         {links.map((item, index) => (

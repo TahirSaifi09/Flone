@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+.flex-slider{
+    display: flex !important;
+
+}
