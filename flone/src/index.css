@@ -4,3 +4,7 @@
     display: flex !important;
 
 }
+.slide-button{
+    display: slick-arrow;
+    slick-arrow:false;
+}

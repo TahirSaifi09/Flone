@@ -25,8 +25,8 @@ export default function Hero() {
     slidesToScroll: 1,
   };
   return (
-    <div className="h-screen">
-      <Slider {...settings} className="bg-pink-100">
+    <div className="h-screen overflow-hidden">
+      <Slider {...settings} className="bg-pink-100 slide-button">
         {data.map((item, index) => (
           <div className="flex-slider pt-24 px-44 flex font-medium items-center">
             <div className="flex flex-wrap gap-4">
