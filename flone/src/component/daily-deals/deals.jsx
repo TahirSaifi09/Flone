@@ -27,15 +27,15 @@ export default function Deals() {
       price: "$30",
     },
     {
-      photo: "9.jpg",
+      photo: "30.jpg",
       alt: "Prouct",
-      photo2: "7.jpg",
+      photo2: "23.jpg",
       product: "Lorem ipsum fashion female top",
       start: <CiStar />,
       price: "$30",
     },
     {
-      photo: "9.jpg",
+      photo: "6.jpg",
       alt: "Prouct",
       photo2: "7.jpg",
       product: "Lorem ipsum fashion female top",
@@ -67,7 +67,7 @@ export default function Deals() {
       </div>
       <div className="px-42 text-center grid grid-cols-4 gap-8">
         {product.map((item, index) => (
-          <div key={index} className="py-16 group">
+          <div key={index} className=" mt-16 group">
             <div className=" relative">
               <img
                 src={item.photo}
@@ -79,10 +79,10 @@ export default function Deals() {
                 alt={item.alt}
                 className="absolute top-0 py-6 opacity-0 duration-700 group-hover:opacity-100"
               />
-              <div className="grid grid-cols-3 text-2xl duration-700 text-white opacity-0 group-hover:opacity-100 py-6 absolute bottom-0">
-                <CiHeart className="bg-violet-500"/>
-                <button className="text-xl bg-violet-500 px-6 py-1">Buy Now</button>
-                <TiEyeOutline className="bg-violet-500"/>
+              <div className="flex justify-between w-full text-2xl duration-900 text-white opacity-0 group-hover:opacity-100 py-6 absolute bottom-0">
+                <CiHeart className="text-6xl px-2 bg-violet-500 border"/>
+                <button className="text-xl border bg-violet-500 px-6 py-1 w-full">Buy Now</button>
+                <TiEyeOutline className="text-6xl border px-2 bg-violet-500"/>
               </div>
             </div>
             <p>{item.product}</p>
