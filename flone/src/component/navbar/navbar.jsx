@@ -21,6 +21,39 @@ export default function Navbar() {
   const isOpen = () => {
     setIsUser(() => !isUser);
   };
+
+  const [selection, updateSelection] = useState(0);
+
+  const links = [
+    {
+      id: 1,
+      page: "Home",
+      path: null,
+      child: [
+
+      ]
+    },
+    {
+      id: 2,
+      page: "Shop",
+      path: null,
+    },
+    {
+      id: 3,
+      page: "Collection",
+      path: null,
+    },
+    {
+      id: 4,
+      page: "Pages",
+      path: null,
+    },
+    {
+      id: 5,
+      page: "Contact Us",
+      path: null,
+    },
+  ];
   const user = [
     {
       name: "Login",
@@ -40,8 +73,30 @@ export default function Navbar() {
     <div className="w-full flex relative px-20 bg-white z-10 items-center justify-between gap-4 py-8">
       <img src="logo.png" alt="logo" />
       <div className="flex gap-8 ">
-        <button onClick={isHomeBar}>
-          <Link to="#">Home</Link>
+        {links.map((item, index) => (
+          <div key={index} onClick={() => updateSelection(item.id)}>
+            <Link to={item.path}>{item.page}</Link>
+            {/* {isHome === item.id && (
+              <div className="absolute left-134 bg-white p-4 gap-1 shadow-2xl top-20 flex flex-col">
+                <Link to="" className="hover:text-violet-500">
+                  Home Fashion
+                </Link>
+                <Link to="" className="hover:text-violet-500">
+                  Home Fashion 2
+                </Link>
+                <Link to="" className="hover:text-violet-500">
+                  Home Fashion 3
+                </Link>
+                <Link to="" className="hover:text-violet-500">
+                  Home Fashion 4
+                </Link>
+              </div>
+            )} */}
+          </div>
+        ))}
+
+        {/* <button onClick={isHomeBar}>
+          <Link to="#"></Link>
         </button>
         {isHome && (
           <div className="absolute left-134 bg-white p-4 gap-1 shadow-2xl top-20 flex flex-col">
@@ -80,7 +135,7 @@ export default function Navbar() {
             <Link to="">Shop Grid Two Collumn</Link>
           </div>
         }
-        <Link to="#">Contact Us</Link>
+        <Link to="#">Contact Us</Link> */}
       </div>
 
       <div className="flex gap-4 text-2xl">

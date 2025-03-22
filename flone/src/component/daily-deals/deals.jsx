@@ -79,10 +79,10 @@ export default function Deals() {
                 alt={item.alt}
                 className="absolute top-0 py-6 opacity-0 duration-700 group-hover:opacity-100"
               />
-              <div className="flex justify-between w-full text-2xl duration-900 text-white opacity-0 group-hover:opacity-100 py-6 absolute bottom-0">
-                <CiHeart className="text-6xl px-2 bg-violet-500 border"/>
-                <button className="text-xl border bg-violet-500 px-6 py-1 w-full">Buy Now</button>
-                <TiEyeOutline className="text-6xl border px-2 bg-violet-500"/>
+              <div className="flex justify-between group w-full text-2xl duration-700 transform text-white opacity-0 ease-in-out group-hover:opacity-100 py-6 absolute bottom-0">
+                <CiHeart className="text-6xl px-2 bg-violet-500 border translate-y-6 group-hover:translate-0 duration-300 delay-100"/>
+                <button className="text-xl border bg-violet-500 px-6 py-1 w-full translate-y-6 group-hover:translate-0 duration-300 delay-150">Buy Now</button>
+                <TiEyeOutline className="text-6xl border px-2 bg-violet-500 translate-y-6 group-hover:translate-0 duration-300 delay-200"/>
               </div>
             </div>
             <p>{item.product}</p>
