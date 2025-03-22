@@ -2,13 +2,20 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { CiHeart, CiSearch, CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Profile from "./profile";
 export default function Navbar() {
   const [isUser, setIsUser] = useState(false);
   const [isHome, setIsHome] = useState(false);
+  const [isShop, setIsShop] = useState(false);
+  const [isPage, setIsPage] = useState(false);
 
   const isHomeBar = () => {
-    setIsHome = () => !isHome;
+    setIsHome(() => !isHome);
+  };
+  const isShopOpen = () => {
+    setIsShop(() => !isShop);
+  };
+  const isPageOpen = () => {
+    setIsPage(() => !isPage);
   };
 
   const isOpen = () => {
@@ -28,47 +35,53 @@ export default function Navbar() {
       path: null,
     },
   ];
-  const links = [
-    {
-      page: "Home",
-      path: "/",
-    },
-    {
-      page: "Shop",
-      path: null,
-    },
-    {
-      page: "Collection",
-      path: null,
-    },
-    {
-      page: "Pages",
-      path: null,
-    },
-    {
-      page: "Contact Us",
-      path: null,
-    },
-  ];
+
   return (
     <div className="w-full flex relative px-20 bg-white z-10 items-center justify-between gap-4 py-8">
       <img src="logo.png" alt="logo" />
       <div className="flex gap-8 ">
-        {links.map((item, index) => (
-          <div key={index}>
-            <Link to={item.path}>{item.page}</Link>
+        <button onClick={isHomeBar}>
+          <Link to="#">Home</Link>
+        </button>
+        {isHome && (
+          <div className="absolute left-134 bg-white p-4 gap-1 shadow-2xl top-20 flex flex-col">
+            <Link to="" className="hover:text-violet-500">
+              Home Fashion
+            </Link>
+            <Link to="" className="hover:text-violet-500">
+              Home Fashion 2
+            </Link>
+            <Link to="" className="hover:text-violet-500">
+              Home Fashion 3
+            </Link>
+            <Link to="" className="hover:text-violet-500">
+              Home Fashion 4
+            </Link>
           </div>
-        ))}
+        )}
+        <button onClick={isShopOpen}>
+          <Link to="#">Shop</Link>
+        </button>
+        {isShop && (
+          <div className="flex flex-col absolute top-22 ml-16 bg-white p-2 gap-1 shadow-2xl">
+            <Link to="">Shop Grid Standard</Link>
+            <Link to="">Shop Grid Filter</Link>
+            <Link to="">Shop Grid Two Collumn</Link>
+          </div>
+        )}        
+        <Link to="#">Collection</Link>
+        <button onClick={isPageOpen}>
+        <Link to="#">Pages</Link>
+        </button>
+        {
+          isPage && <div className="flex absolute ml-56 top-20 bg-white p-4 flex-col gap-1">
+            <Link to="">Cart</Link>
+            <Link to="">Shop Grid Filter</Link>
+            <Link to="">Shop Grid Two Collumn</Link>
+          </div>
+        }
+        <Link to="#">Contact Us</Link>
       </div>
-      <button onClick={isHomeBar}>Hello</button>
-      {isHome && (
-        <div className="absolute left-134 bg-white p-4 gap-1 shadow-2xl top-20 flex flex-col">
-          <Link to="">Home Fashion</Link>
-          <Link to="">Home Fashion 2</Link>
-          <Link to="">Home Fashion 3</Link>
-          <Link to="">Home Fashion 4</Link>
-        </div>
-      )}
 
       <div className="flex gap-4 text-2xl">
         <CiSearch />
