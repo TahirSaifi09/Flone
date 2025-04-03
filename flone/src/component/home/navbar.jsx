@@ -3,10 +3,15 @@ import { CiHeart, CiSearch, CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 export default function Navbar() {
+  const [isSearch, setIsSearch] = useState(false);
   const [isUser, setIsUser] = useState(false);
   const [isHome, setIsHome] = useState(false);
   const [isShop, setIsShop] = useState(false);
   const [isPage, setIsPage] = useState(false);
+
+  const isSearchOpen = () =>{
+    setIsSearch = ()=>(!isSearch);
+  }
 
   const isHomeBar = () => {
     setIsHome(() => !isHome);
@@ -139,7 +144,9 @@ export default function Navbar() {
       </div>
 
       <div className="flex gap-4 text-2xl">
-        <CiSearch />
+        <button onClick={isSearchOpen}><CiSearch /></button>
+        
+        
         <button onClick={isOpen}>
           <CiUser />
         </button>

@@ -37,7 +37,7 @@ export default function Deals() {
     {
       photo: "6.jpg",
       alt: "Prouct",
-      photo2: "7.jpg",
+      photo2: "8.jpg",
       product: "Lorem ipsum fashion female top",
       start: <CiStar />,
       price: "$30",
