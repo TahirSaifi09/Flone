@@ -1,5 +1,6 @@
 import { CiHeart, CiStar } from "react-icons/ci";
 import { TiEyeOutline } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 export default function Deals() {
   const page = [
@@ -68,7 +69,7 @@ export default function Deals() {
       <div className="px-42 text-center grid grid-cols-4 gap-8">
         {product.map((item, index) => (
           <div key={index} className=" mt-16 group">
-            <div className=" relative">
+            <div className="relative cursor-pointer">
               <img
                 src={item.photo}
                 alt="{item.alt}"
@@ -80,9 +81,9 @@ export default function Deals() {
                 className="absolute top-0 py-6 opacity-0 duration-700 group-hover:opacity-100"
               />
               <div className="flex justify-between group w-full text-2xl duration-700 transform text-white opacity-0 ease-in-out group-hover:opacity-100 py-6 absolute bottom-0">
-                <CiHeart className="text-6xl px-2 bg-violet-500 border translate-y-6 group-hover:translate-0 duration-300 delay-100"/>
-                <button className="text-xl border bg-violet-500 px-6 py-1 w-full translate-y-6 group-hover:translate-0 duration-300 delay-150">Buy Now</button>
-                <TiEyeOutline className="text-6xl border px-2 bg-violet-500 translate-y-6 group-hover:translate-0 duration-300 delay-200"/>
+                <CiHeart className="text-6xl px-2 bg-violet-500 hover:bg-black border translate-y-6 group-hover:translate-0 duration-300 delay-100"/>
+                <Link to="#" className="text-xl border bg-violet-500 px-6 py-3 hover:bg-black w-full translate-y-6 group-hover:translate-0 duration-300 delay-150">Buy Now</Link>
+                <TiEyeOutline className="text-6xl border hover:bg-black px-2 bg-violet-500 translate-y-6 group-hover:translate-0 duration-300 delay-200"/>
               </div>
             </div>
             <p>{item.product}</p>
