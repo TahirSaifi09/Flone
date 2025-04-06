@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <div>
-      <div className="h-24 flex justify-center items-center font-medium w-full bg-gray-200">
+      <div className="h-24 mt-4 flex justify-center items-center font-medium w-full bg-gray-100">
         <h3>
           <Link to="/" className="text-gray-500">
             HOME
