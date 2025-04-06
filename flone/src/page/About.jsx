@@ -1,3 +1,4 @@
+import Banner from "../component/about/Banner";
 import Hero from "../component/about/Hero";
 import Footer from "../component/Footer";
 import Navbar from "../component/home/navbar";
@@ -7,6 +8,7 @@ export default function About(){
         <div>
             <Navbar />
             <Hero />
+            <Banner />
             <Footer />
         </div>
     )

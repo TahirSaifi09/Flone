@@ -75,7 +75,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full flex relative px-20 bg-white z-10 items-center justify-between gap-4 py-8">
+    <div className="w-full flex relative px-44 bg-white z-10 items-center justify-between gap-4 py-8">
       <img src="logo.png" alt="logo" />
       <div className="flex gap-8 ">
         {links.map((item, index) => (
