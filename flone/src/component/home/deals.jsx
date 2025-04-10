@@ -51,6 +51,39 @@ export default function Deals() {
       start: <CiStar />,
       price: "$30",
     },
+    {
+      photo: "6.jpg",
+      alt: "Prouct",
+      photo2: "8.jpg",
+      product: "Lorem ipsum fashion female top",
+      start: <CiStar />,
+      price: "$30",
+    },
+    {
+      photo: "30.jpg",
+      alt: "Prouct",
+      photo2: "23.jpg",
+      product: "Lorem ipsum fashion female top",
+      start: <CiStar />,
+      price: "$30",
+    },
+    {
+      photo: "9.jpg",
+      alt: "Prouct",
+      photo2: "7.jpg",
+      product: "Lorem ipsum fashion female top",
+      start: <CiStar />,
+      price: "$30",
+    },
+    {
+      photo: "9.jpg",
+      alt: "Prouct",
+      photo2: "7.jpg",
+      product: "Lorem ipsum fashion female top",
+      start: <CiStar />,
+      price: "$30",
+    },
+    
   ];
   return (
     <div>

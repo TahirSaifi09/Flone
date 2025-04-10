@@ -4,7 +4,7 @@ export default function Footer(){
     return(
         <div className="w-full flex justify-between items-center px-44 py-20 bg-gray-100">
             <div className="flex flex-col gap-3 text-gray-500">
-                <img src="logo.png" alt="logo" />
+                <Link to="/"><img src="logo.png" alt="logo" /></Link>
                 <p>© 2025 Flone. </p>
                 <p>All Rights Reserved</p>
             </div>

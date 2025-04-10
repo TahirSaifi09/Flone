@@ -62,11 +62,11 @@ export default function Navbar() {
   const user = [
     {
       name: "Login",
-      path: null,
+      path: "/login",
     },
     {
       name: "Register",
-      path: null,
+      path: "/register",
     },
     {
       name: "My Account",
