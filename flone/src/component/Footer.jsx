@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer(){
     return(
         <div className="w-full flex justify-between items-center px-44 py-20 bg-gray-100">
@@ -8,7 +10,7 @@ export default function Footer(){
             </div>
             <ul className="flex flex-col gap-3 text-gray-500">
                 <li className="text-black">ABOUT US</li>
-                <li>About us</li>
+                <Link to="/about">About us</Link>
                 <li>Store location</li>
                 <li>Contact</li>
                 <li>Order tracking</li>

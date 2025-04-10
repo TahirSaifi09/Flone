@@ -33,7 +33,7 @@ export default function Navbar() {
     {
       id: 1,
       page: "Home",
-      path: null,
+      path: "/",
       child: [
 
       ]
