@@ -5,6 +5,8 @@ import Home from "./page/home";
 import About from "./page/about";
 import Login from "./component/Login/index"
 import Register from "./component/Login/Register";
+import Forgot from "./component/Login/forgot";
+import Form from "./component/Contact/form";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -13,9 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>
-        <Route path="/contact" element={<a />}/>
+        <Route path="/contact" element={<Form />}/>
         <Route path="/login" element={<Login />}/> 
         <Route path="/register" element={<Register />}/>
+        <Route path="/forgot" element={<Forgot />}/>
       </Routes>
     </BrowserRouter>
   );
