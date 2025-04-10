@@ -6,9 +6,13 @@ export default function Login() {
   return (
     <div>
       <div className=" bg-gray-200  p-24 flex justify-center max-md:w-screen max-md:p-0">
-        <div className="shadow-2xl flex justify-center w-4/5 max-md:w-screen  ">
+        <div className="shadow-2xl bg-white flex justify-center w-4/5 max-md:w-screen  ">
           <div className=" bg-white w-3/5 h-99 max-md:hidden ">
-            <img src="Security.jpg" alt="Description of image" className="w-full h-auto"/>
+            <img
+              src="Security.jpg"
+              alt="Description of image"
+              className="w-full h-auto"
+            />
           </div>
           <div className="w-3/5 bg-gray-100 max-md:w-screen ">
             <div>
