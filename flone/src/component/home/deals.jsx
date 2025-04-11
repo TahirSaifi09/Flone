@@ -33,7 +33,7 @@ export default function Deals() {
       photo2: "23.jpg",
       product: "Lorem ipsum fashion female top",
       start: <CiStar />,
-      price: "$30",
+      price: "$29",
     },
     {
       photo: "6.jpg",
@@ -41,7 +41,7 @@ export default function Deals() {
       photo2: "8.jpg",
       product: "Lorem ipsum fashion female top",
       start: <CiStar />,
-      price: "$30",
+      price: "$35",
     },
     {
       photo: "9.jpg",
@@ -49,7 +49,7 @@ export default function Deals() {
       photo2: "7.jpg",
       product: "Lorem ipsum fashion female top",
       start: <CiStar />,
-      price: "$30",
+      price: "$25",
     },
     {
       photo: "6.jpg",
@@ -57,7 +57,7 @@ export default function Deals() {
       photo2: "8.jpg",
       product: "Lorem ipsum fashion female top",
       start: <CiStar />,
-      price: "$30",
+      price: "$35",
     },
     {
       photo: "30.jpg",
@@ -73,7 +73,7 @@ export default function Deals() {
       photo2: "7.jpg",
       product: "Lorem ipsum fashion female top",
       start: <CiStar />,
-      price: "$30",
+      price: "$35",
     },
     {
       photo: "9.jpg",
@@ -81,7 +81,7 @@ export default function Deals() {
       photo2: "7.jpg",
       product: "Lorem ipsum fashion female top",
       start: <CiStar />,
-      price: "$30",
+      price: "$29",
     },
     
   ];
@@ -92,7 +92,7 @@ export default function Deals() {
         <p>DAILY DEALS!</p>
         <hr className="border-2 w-24" />
       </div>
-      <div className="flex justify-center gap-4 text-xl font-medium ">
+      <div className="flex justify-center gap-4 pb-4 text-xl font-medium ">
         {page.map((item, index) => (
           <div className="text-gray-600 hover:text-black">
             <h3>{item.name}</h3>
@@ -101,7 +101,7 @@ export default function Deals() {
       </div>
       <div className="px-42 text-center grid grid-cols-4 gap-8">
         {product.map((item, index) => (
-          <div key={index} className=" mt-16 group">
+          <div key={index} className="group">
             <div className="relative cursor-pointer">
               <img
                 src={item.photo}

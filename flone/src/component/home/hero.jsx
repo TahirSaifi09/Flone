@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 export default function Hero() {
   const data = [
@@ -13,14 +14,16 @@ export default function Hero() {
       h2: "Smart Products",
       para: "Winter Offer 2025 Collection",
       click: "Shop Now",
-      photo:"/single-slide-1.png",
+      photo: "/single-slide-1.png",
       alt: "Photo",
     },
   ];
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    autoplaySpeed: 5000,
+    speed: 1000,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -28,13 +31,16 @@ export default function Hero() {
     <div className="h-screen overflow-hidden">
       <Slider {...settings} className="bg-pink-100 slide-button">
         {data.map((item, index) => (
-          <div className="flex-slider pt-24 px-44 flex font-medium items-center">
+          <div key={index} className="flex-slider pt-24 px-44 flex font-medium items-center">
             <div className="flex flex-wrap gap-4">
               <h2 className="text-3xl">{item.h2}</h2>
               <p className="text-7xl">{item.para}</p>
-              <button className="border px-12 hover:bg-purple-500 hover:text-white py-3 mt-8">{item.click}</button>
+              <div className="relative group mt-8">
+                <Link to="#" className=" hover:text-white border py-4 px-10 hover:bg-purple-500">{item.click}
+                </Link>
+              </div>
             </div>
-            <img src={item.photo} alt={item.alt} className="w-[55%]"/>
+            <img src={item.photo} alt={item.alt} className="w-[55%]" />
           </div>
         ))}
       </Slider>
