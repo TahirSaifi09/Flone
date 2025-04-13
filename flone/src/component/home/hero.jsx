@@ -31,12 +31,19 @@ export default function Hero() {
     <div className="h-screen overflow-hidden">
       <Slider {...settings} className="bg-pink-100 slide-button">
         {data.map((item, index) => (
-          <div key={index} className="flex-slider pt-24 px-44 flex font-medium items-center">
+          <div
+            key={index}
+            className="flex-slider pt-24 px-44 flex font-medium items-center"
+          >
             <div className="flex flex-wrap gap-4">
               <h2 className="text-3xl">{item.h2}</h2>
               <p className="text-7xl">{item.para}</p>
               <div className="relative group mt-8">
-                <Link to="#" className=" hover:text-white border py-4 px-10 hover:bg-purple-500">{item.click}
+                <Link
+                  to="#"
+                  className=" hover:text-white border py-4 px-10 hover:bg-purple-500"
+                >
+                  {item.click}
                 </Link>
               </div>
             </div>

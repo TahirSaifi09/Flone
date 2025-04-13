@@ -29,10 +29,10 @@ export default function Blog() {
       <div className="flex justify-between">
         {data.map((item, index) => (
           <div key={index} className="relative">
-            <img src={item.photo} alt="{item.alts}"/>
+            <img src={item.photo} alt="{item.alts}" />
             <div className="bottom-0 w-full translate-y-10 absolute px-10 flex flex-col text-center justify-center h-24 font-medium">
-                <p className="w-full px-6 py-2 bg-white text-2xl">{item.title}</p>
-                <i className="text-gray-500 bg-white">{item.By}</i>
+              <p className="w-full px-6 py-2 bg-white text-2xl">{item.title}</p>
+              <i className="text-gray-500 bg-white">{item.By}</i>
             </div>
           </div>
         ))}

@@ -13,8 +13,9 @@ export default function Hero() {
       </div>
       <div className="w-full text-center mt-20">
         <p className="text-gray-500 font-medium">Who Are We</p>
-        <p className="text-3xl font-medium border-b-2 inline-block">Welcome To Flone</p>
-        
+        <p className="text-3xl font-medium border-b-2 inline-block">
+          Welcome To Flone
+        </p>
       </div>
       <div className="px-100 mt-6 text-center">
         <p>
