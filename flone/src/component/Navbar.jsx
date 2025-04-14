@@ -35,7 +35,7 @@ export default function Navbar() {
     {
       id: 2,
       page: "Shop",
-      path: null,
+      path: "/shop",
     },
     {
       id: 3,
