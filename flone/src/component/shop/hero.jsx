@@ -8,9 +8,10 @@ export default function Hero() {
           <Link to="/" className="text-gray-500">
             HOME
           </Link>{" "}
-          / ABOUT US
+          / Shop
         </h3>
       </div>
+      
     </div>
   );
 }
