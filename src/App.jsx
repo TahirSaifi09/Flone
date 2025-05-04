@@ -3,9 +3,9 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./page/Home";
 import Login from "./component/login/index"
-import Register from "./component/Login/Register";
-import Forgot from "./component/Login/forgot";
-import Form from "./component/Contact/form";
+import Register from "./component/login/Register";
+import Forgot from "./component/login/forgot";
+import Form from "./component/contact/form";
 import Shop from "./page/Shop";
 import About from "./page/About";
 function App() {
