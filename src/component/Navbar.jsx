@@ -2,6 +2,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { CiHeart, CiSearch, CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { IoMdMenu } from "react-icons/io";
 export default function Navbar() {
   const [isUser, setIsUser] = useState(false);
   const [isHome, setIsHome] = useState(false);
@@ -69,9 +70,12 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full flex relative px-44 bg-white z-10 items-center justify-between gap-4 py-8">
+    <div className="w-full flex relative px-4 md:px-44 bg-white z-10 items-center justify-between gap-4 py-8">
       <img src="logo.png" alt="logo" />
-      <div className="flex gap-8 ">
+      <div className="md:hidden">
+      <IoMdMenu className="text-5xl"/>
+      </div>
+      <div className="flex max-md:hidden gap-8 ">
         {links.map((item, index) => (
           <div key={index} onClick={() => updateSelection(item.id)}>
             <Link to={item.path}>{item.page}</Link>
@@ -137,7 +141,7 @@ export default function Navbar() {
         <Link to="#">Contact Us</Link> */}
       </div>
 
-      <div className="flex gap-4 text-2xl">
+      <div className="flex max-md:hidden gap-4 text-2xl">
         <CiSearch />
         <button onClick={isOpen}>
           <CiUser />

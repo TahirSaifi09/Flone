@@ -28,16 +28,16 @@ export default function Hero() {
     slidesToScroll: 1,
   };
   return (
-    <div className="h-screen overflow-hidden">
+    <div className="h-full overflow-hidden">
       <Slider {...settings} className="bg-pink-100 slide-button">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex-slider pt-24 px-44 flex font-medium items-center"
+            className="flex-slider pt-24 px-4 sm:px-44 sm:flex max-sm:flex-wrap font-medium items-center"
           >
             <div className="flex flex-wrap gap-4">
               <h2 className="text-3xl">{item.h2}</h2>
-              <p className="text-7xl">{item.para}</p>
+              <p className="text-4xl sm:text-7xl">{item.para}</p>
               <div className="relative group mt-8">
                 <Link
                   to="#"
@@ -47,7 +47,7 @@ export default function Hero() {
                 </Link>
               </div>
             </div>
-            <img src={item.photo} alt={item.alt} className="w-[55%]" />
+            <img src={item.photo} alt={item.alt} className="w-full pt-10 sm:w-[55%]" />
           </div>
         ))}
       </Slider>

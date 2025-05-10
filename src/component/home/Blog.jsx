@@ -20,13 +20,13 @@ export default function Blog() {
     },
   ];
   return (
-    <div className="px-44 pb-20">
-      <div className="flex items-center font-medium gap-2 justify-center py-10">
+    <div className="px-4 sm:px-44 pb-20">
+      <div className="flex flex-wrap items-center font-medium gap-2 justify-center py-10">
         <hr className="w-24 border-2"></hr>
         <h2 className="text-4xl">OUR BLOG</h2>
         <hr className="w-24 border-2"></hr>
       </div>
-      <div className="flex justify-between">
+      <div className="flex max-sm:flex-wrap gap-16 justify-between">
         {data.map((item, index) => (
           <div key={index} className="relative">
             <img src={item.photo} alt="{item.alts}" />

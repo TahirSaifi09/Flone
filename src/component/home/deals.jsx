@@ -87,7 +87,7 @@ export default function Deals() {
   ];
   return (
     <div>
-      <div className="flex items-center pb-20 justify-center font-medium text-4xl gap-4">
+      <div className="flex flex-wrap items-center pb-20 justify-center font-medium text-4xl gap-4">
         <hr className="border-2 w-24" />
         <p>DAILY DEALS!</p>
         <hr className="border-2 w-24" />
@@ -99,7 +99,7 @@ export default function Deals() {
           </div>
         ))}
       </div>
-      <div className="px-42 text-center grid grid-cols-4 gap-8">
+      <div className="sm:px-42 text-center grid grid-cols-1 sm:grid-cols-4 gap-8">
         {product.map((item, index) => (
           <div key={index} className="group">
             <div className="relative cursor-pointer">

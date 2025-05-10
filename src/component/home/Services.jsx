@@ -27,7 +27,7 @@ export default function Services() {
     },
   ];
   return (
-    <div className="flex gap-10 justify-between px-44 py-20">
+    <div className="flex flex-wrap gap-10 justify-between px-4 sm:px-44 py-20">
       {data.map((item, index) => (
         <div key={index} className="flex gap-4">
           <div className="flex gap-2 w-full items-center">
