@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="w-full flex flex-wrap justify-between items-center gap-4 px-4 sm:px-44 py-8 sm:py-20 bg-gray-100">
+    <div className="w-full flex flex-wrap justify-between items-center gap-4 px-4 sm:px-10 2xl:px-44 py-8 sm:py-20 bg-gray-100">
       <div className="flex flex-col gap-3 text-gray-500">
         <Link to="/">
           <img src="logo.png" alt="logo" />
@@ -31,7 +31,7 @@ export default function Footer() {
         <li>Instagram</li>
         <li>Youtube</li>
       </ul>
-      <div className="flex flex-col gap-3 text-gray-500 sm:w-1/4">
+      <div className="flex flex-col gap-3 text-gray-500 lg:w-1/4">
         <p className="text-black">SUBSCRIBE</p>
         <p>Get E-mail updates about our latest shop and special offers.</p>
         <input

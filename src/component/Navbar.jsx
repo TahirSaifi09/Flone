@@ -68,7 +68,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full flex relative px-4 md:px-44 bg-white z-10 items-center justify-between gap-4 py-4 sm:py-8">
+    <div className="w-full flex relative px-4 lg:px-10 2xl:px-44 bg-white z-10 items-center justify-between gap-4 py-4 md:py-6 lg:py-8">
       <img src="logo.png" alt="logo" />
       <div className="md:hidden">
         <IoMdMenu className="text-4xl" />

@@ -20,18 +20,18 @@ export default function Blog() {
     },
   ];
   return (
-    <div className="px-4 sm:px-44 pb-20">
-      <div className="flex flex-wrap items-center font-medium gap-2 justify-center py-10">
-        <hr className="w-24 border-2"></hr>
-        <h2 className="text-4xl">OUR BLOG</h2>
-        <hr className="w-24 border-2"></hr>
+    <div className="px-4 sm:px-10 2xl:px-44 pb-20">
+      <div className="flex sm:flex-wrap items-center font-medium gap-2 justify-center py-10">
+        <hr className="w-1/5 sm:w-24 border-2"></hr>
+        <h2 className="text-lg max-lg:w-1/3 sm:text-4xl">OUR BLOG</h2>
+        <hr className="w-1/5 sm:w-24 border-2"></hr>
       </div>
-      <div className="flex max-sm:flex-wrap gap-16 justify-between">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16 justify-between">
         {data.map((item, index) => (
-          <div key={index} className="relative">
+          <div key={index} className="relative py-10">
             <img src={item.photo} alt="{item.alts}" />
-            <div className="bottom-0 w-full translate-y-10 absolute px-10 flex flex-col text-center justify-center h-24 font-medium">
-              <p className="w-full px-6 py-2 bg-white text-2xl">{item.title}</p>
+            <div className="bottom-0 w-full lg:translate-y-10 absolute px-10 flex flex-col text-center justify-center h-24 font-medium">
+              <p className="w-full px-6 py-2 bg-white text-lg lg:text-2xl">{item.title}</p>
               <i className="text-gray-500 bg-white">{item.By}</i>
             </div>
           </div>

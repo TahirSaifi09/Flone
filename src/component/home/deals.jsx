@@ -101,7 +101,7 @@ export default function Deals() {
           </div>
         ))}
       </div>
-      <div className="sm:px-42 text-center grid grid-cols-1 sm:grid-cols-4 sm:gap-8">
+      <div className="px-4 sm:px-10 2xl:px-42 text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-8">
         {product.map((item, index) => (
           <div key={index} className="group max-sm:px-4">
             <div className="relative cursor-pointer">
