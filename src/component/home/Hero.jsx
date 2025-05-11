@@ -33,11 +33,11 @@ export default function Hero() {
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex-slider pt-24 px-4 sm:px-44 sm:flex max-sm:flex-wrap font-medium items-center"
+            className="flex-slider pt-10 sm:pt-24 px-4 sm:px-44 sm:flex max-sm:flex-wrap font-medium items-center"
           >
-            <div className="flex flex-wrap gap-4">
+            <div className="flex text-center justify-center flex-wrap gap-4">
               <h2 className="text-3xl">{item.h2}</h2>
-              <p className="text-4xl sm:text-7xl">{item.para}</p>
+              <p className="text-3xl sm:text-7xl">{item.para}</p>
               <div className="relative group mt-8">
                 <Link
                   to="#"

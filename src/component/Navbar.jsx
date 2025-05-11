@@ -29,9 +29,7 @@ export default function Navbar() {
       id: 1,
       page: "Home",
       path: "/",
-      child: [
-
-      ]
+      child: [],
     },
     {
       id: 2,
@@ -70,10 +68,10 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full flex relative px-4 md:px-44 bg-white z-10 items-center justify-between gap-4 py-8">
+    <div className="w-full flex relative px-4 md:px-44 bg-white z-10 items-center justify-between gap-4 py-4 sm:py-8">
       <img src="logo.png" alt="logo" />
       <div className="md:hidden">
-      <IoMdMenu className="text-5xl"/>
+        <IoMdMenu className="text-4xl" />
       </div>
       <div className="flex max-md:hidden gap-8 ">
         {links.map((item, index) => (

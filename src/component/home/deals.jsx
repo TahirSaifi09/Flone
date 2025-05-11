@@ -83,25 +83,27 @@ export default function Deals() {
       start: <CiStar />,
       price: "$29",
     },
-    
   ];
   return (
     <div>
-      <div className="flex flex-wrap items-center pb-20 justify-center font-medium text-4xl gap-4">
-        <hr className="border-2 w-24" />
+      <div className="flex px-4 items-center pb-20 justify-center font-medium text-xl sm:text-4xl gap-4">
+        <hr className="border-2 w-1/5 sm:w-24" />
         <p>DAILY DEALS!</p>
-        <hr className="border-2 w-24" />
+        <hr className="border-2 w-1/5 sm:w-24" />
       </div>
-      <div className="flex justify-center gap-4 pb-4 text-xl font-medium ">
+      <div className="flex flex-wrap max-sm:px-4 justify-center gap-4 pb-4 text-xl font-medium ">
         {page.map((item, index) => (
-          <div className="text-gray-600 hover:text-black">
+          <div
+            key={index}
+            className="text-gray-600 max-sm:w-full text-center hover:text-black"
+          >
             <h3>{item.name}</h3>
           </div>
         ))}
       </div>
-      <div className="sm:px-42 text-center grid grid-cols-1 sm:grid-cols-4 gap-8">
+      <div className="sm:px-42 text-center grid grid-cols-1 sm:grid-cols-4 sm:gap-8">
         {product.map((item, index) => (
-          <div key={index} className="group">
+          <div key={index} className="group max-sm:px-4">
             <div className="relative cursor-pointer">
               <img
                 src={item.photo}
@@ -114,9 +116,14 @@ export default function Deals() {
                 className="absolute top-0 py-6 opacity-0 duration-700 group-hover:opacity-100"
               />
               <div className="flex justify-between group w-full text-2xl duration-700 transform text-white opacity-0 ease-in-out group-hover:opacity-100 py-6 absolute bottom-0">
-                <CiHeart className="text-6xl px-2 bg-violet-500 hover:bg-black border translate-y-6 group-hover:translate-0 duration-300 delay-100"/>
-                <Link to="#" className="text-xl border bg-violet-500 px-6 py-3 hover:bg-black w-full translate-y-6 group-hover:translate-0 duration-300 delay-150">Buy Now</Link>
-                <TiEyeOutline className="text-6xl border hover:bg-black px-2 bg-violet-500 translate-y-6 group-hover:translate-0 duration-300 delay-200"/>
+                <CiHeart className="text-6xl px-2 bg-violet-500 hover:bg-black border translate-y-6 group-hover:translate-0 duration-300 delay-100" />
+                <Link
+                  to="#"
+                  className="text-xl border bg-violet-500 px-6 py-3 hover:bg-black w-full translate-y-6 group-hover:translate-0 duration-300 delay-150"
+                >
+                  Buy Now
+                </Link>
+                <TiEyeOutline className="text-6xl border hover:bg-black px-2 bg-violet-500 translate-y-6 group-hover:translate-0 duration-300 delay-200" />
               </div>
             </div>
             <p>{item.product}</p>
