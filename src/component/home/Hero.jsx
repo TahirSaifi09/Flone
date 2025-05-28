@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 export default function Hero() {
+  
   const data = [
     {
       h2: "Smart Products",
@@ -50,7 +51,9 @@ export default function Hero() {
             <img src={item.photo} alt={item.alt} className="w-full pt-10 sm:w-[55%]" />
           </div>
         ))}
+
       </Slider>
+
     </div>
   );
 }

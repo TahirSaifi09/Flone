@@ -1,8 +1,12 @@
 import { CgMenuGridR } from "react-icons/cg";
 import { PiGridFourFill } from "react-icons/pi";
 import { TfiMenuAlt } from "react-icons/tfi";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchTodos } from "../../redux/slice/todo"
+import { useEffect } from "react";
 
 export default function HeroShop() {
+
   return (
     <div className="flex justify-between px-44 py-10">
       <p>Search</p>
@@ -17,6 +21,11 @@ export default function HeroShop() {
         <CgMenuGridR />
         <TfiMenuAlt />
       </div>
+      <button onClick={(e) => dispatch(fetchTodos())} >Fetch</button>
+      {state?.map((e) => (
+        <li>{e.title}</li>
+      ))}
+
     </div>
   );
 }

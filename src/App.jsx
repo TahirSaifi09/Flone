@@ -8,6 +8,7 @@ import Forgot from "./component/login/forgot";
 import Form from "./component/contact/form";
 import Shop from "./page/Shop";
 import About from "./page/About";
+import Redux from "./component/ReduxTodo";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/register" element={<Register />}/>
         <Route path="/forgot" element={<Forgot />}/>
         <Route path="/shop" element={<Shop />}/>
+        <Route path="/redux" element={<Redux/>}/>
       </Routes>
     </BrowserRouter>
   );
