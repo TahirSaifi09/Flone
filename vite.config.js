@@ -7,4 +7,9 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss()],
+    server: {
+    allowedHosts: [
+      'epic-fancy-moth.ngrok-free.app'
+    ]
+  }      
 })
