@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { CiHeart, CiStar } from "react-icons/ci";
 import { TiEyeOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
 export default function Deals() {
+
+  const [active, setActive] = useState("New Arrivals")
   const page = [
     {
       name: "New Arrivals",
