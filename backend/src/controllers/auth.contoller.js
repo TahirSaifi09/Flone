@@ -51,3 +51,12 @@ exports.register = async (req, res, next)=>{
         next(err);
     }
 };
+
+exports.login = (req, res, next)=>{
+    const {email, password} = req.body;
+    try {
+        
+    } catch (error) {
+        
+    }
+}
