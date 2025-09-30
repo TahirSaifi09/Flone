@@ -54,9 +54,57 @@ exports.register = async (req, res, next)=>{
 
 exports.login = (req, res, next)=>{
     const {email, password} = req.body;
-    try {
-        
-    } catch (error) {
-        
+    
+    if(!email || !password){
+        return res.status(400).json({
+            success: false,
+            error: "Please enter an email or password",
+        })
+    }
+
+    try{
+        const user = await User.findOne({email}).select("+password");
+
+        if(!user){
+            return res.status(401).json({
+                success: false,
+                error: "Invalid credentials",
+            })
+        }
+
+        const isMatch = await bcrypt.compare(password, user.password)
+
+        if(!isMatch){
+            return res.status(401).json({
+                success: false,
+                error: "Invalid credentials"
+            });
+        }
+
+        // const token = jwt.sign(
+        //     { id: user._id, role:user.role},
+        //     process.env.JWT_EXPIRES_IN_MS
+        // )
+
+        const option = {
+            expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production"
+        };
+
+        res.status(200).cookie("token", token, option).json({
+            success: true,
+            message:"Login successfully",
+            accessToken: token,
+            tokenType:"Bearer",
+            data: user,
+        });
+
+
+    }catch(err){
+        return res.status(500).json({
+            success: false,
+            message: err.message
+        })
     }
 }
