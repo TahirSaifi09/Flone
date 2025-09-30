@@ -52,7 +52,7 @@ exports.register = async (req, res, next)=>{
     }
 };
 
-exports.login = (req, res, next)=>{
+exports.login = async (req, res, next)=>{
     const {email, password} = req.body;
     
     if(!email || !password){
