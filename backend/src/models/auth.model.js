@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 
-const authSchema = new mongoose.Schema(
+export default authSchema = new mongoose.Schema(
     {
         fullname:{
             type: String,
@@ -50,4 +50,4 @@ const authSchema = new mongoose.Schema(
 );
 
 const Auth = mongoose.model("auth", authSchema)
-module.exports = Auth;
+// module.exports = Auth;
