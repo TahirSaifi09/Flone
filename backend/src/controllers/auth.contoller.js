@@ -1,9 +1,9 @@
 import Auth from "../models/auth.model.js"
-import bcrypto from "crypto"
+import bcrypt from "crypto"
 
 // Register 
 exports.register = async (req, res, next)=>{
-    const {firstname, email, password, confirmPassowrd, role} = req.body;
+    const {fullname, email, password, role} = req.body;
 
     try{
         const salt = await bcrypt.genSalt(10);
@@ -63,7 +63,7 @@ exports.login = async (req, res, next)=>{
     }
 
     try{
-        const user = await User.findOne({email}).select("+password");
+        const user = await Auth.findOne({email}).select("+password");
 
         if(!user){
             return res.status(401).json({
@@ -92,6 +92,8 @@ exports.login = async (req, res, next)=>{
             secure: process.env.NODE_ENV === "production"
         };
 
+        user.password = undefined;
+        
         res.status(200).cookie("token", token, option).json({
             success: true,
             message:"Login successfully",
