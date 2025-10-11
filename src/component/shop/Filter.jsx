@@ -17,6 +17,10 @@ const categories = [
   "Kids",
   "Auto Parts",
   "Cakes",
+  "Pet Food",
+  "Medical",
+  "Black Friday",
+  "Christmas",
 ];
 
 export default function Filter() {
@@ -25,7 +29,7 @@ export default function Filter() {
       {/* Search Section */}
       <div className="mb-6">
         <h2 className="text-lg font-semibold mb-2 text-gray-800">Search</h2>
-        <div className="flex items-center border rounded-lg overflow-hidden">
+        <div className="flex items-center border overflow-hidden">
           <input
             type="search"
             name="search"
@@ -43,14 +47,14 @@ export default function Filter() {
 
       {/* Categories Section */}
       <div>
-        <h2 className="text-lg font-semibold mb-3 text-gray-800">Categories</h2>
+        <h3 className="text-lg font-semibold mb-3 text-gray-800">Categories</h3>
         <ul className="flex flex-col gap-2 text-sm text-gray-700">
           {categories.map((category, index) => {
             const id = category.toLowerCase().replace(/\s+/g, "-");
             return (
-              <li key={index} className="flex items-center gap-2">
+              <li key={index} className="flex items-center gap-3">
                 <input
-                  type="checkbox"
+                  type="radio"
                   id={id}
                   name="category"
                   className="accent-indigo-500 w-4 h-4"

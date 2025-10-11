@@ -2,6 +2,7 @@ import { CgMenuGridR } from "react-icons/cg";
 import { PiGridFourFill } from "react-icons/pi";
 import { TfiMenuAlt } from "react-icons/tfi";
 import Filter from "./filter";
+import ProductList from "../product_list/products";
 // import { useDispatch, useSelector } from "react-redux";
 // import { fetchTodos } from "../../redux/slice/todo"
 // import { useEffect } from "react";
@@ -29,7 +30,10 @@ export default function HeroShop() {
       ))} */}
 
       </div>
-      <Filter />
+      <div className="flex gap-6 px-10 py-10">
+        <Filter />
+        <ProductList />
+      </div>
     </div>
   );
 }

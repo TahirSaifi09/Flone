@@ -110,7 +110,7 @@ export default function Deals() {
             <div className="relative cursor-pointer">
               <img
                 src={item.photo}
-                alt="{item.alt}"
+                alt={item.alt}
                 className="py-6 opacity-100"
               />
               <img
