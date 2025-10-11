@@ -86,12 +86,7 @@ export default function ProductList() {
 
   return (
     <section className="w-4/5 px-6 py-8">
-      {/* Header */}
-      <div className="flex items-center justify-center gap-4 pb-10 font-semibold text-2xl text-gray-800">
-        <hr className="border-2 w-20 border-gray-300" />
-        <p>DAILY DEALS!</p>
-        <hr className="border-2 w-20 border-gray-300" />
-      </div>
+      
 
       {/* Tabs */}
       <div className="flex flex-wrap justify-center gap-6 pb-8">
@@ -111,47 +106,40 @@ export default function ProductList() {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {products.map((item) => (
-          <div
-            key={item.id}
-            className="group relative bg-white border rounded-xl shadow-sm hover:shadow-lg transition-shadow"
-          >
-            <div className="relative overflow-hidden rounded-t-xl">
+      <div className="px-4 sm:px-10 text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-8">
+        {products.map((item, index) => (
+          <div key={index} className="group max-sm:px-4">
+            <div className="relative cursor-pointer">
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-64 object-cover transition-opacity duration-500"
+                className="py-6 opacity-100"
               />
               <img
                 src={item.hoverImage}
-                alt={item.title}
-                className="absolute top-0 left-0 w-full h-64 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                alt={item.alt}
+                className="absolute top-0 py-6 opacity-0 duration-700 group-hover:opacity-100"
               />
-
-              {/* Hover Icons */}
-              <div className="absolute inset-0 flex items-end justify-between px-3 pb-3 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                <CiHeart className="text-3xl p-2 bg-indigo-500 hover:bg-black text-white rounded-full cursor-pointer" />
+              <div className="flex justify-between group w-full text-2xl duration-700 transform text-white opacity-0 ease-in-out group-hover:opacity-100 py-6 absolute bottom-0">
+                <CiHeart className="text-6xl px-2 bg-violet-500 hover:bg-black border translate-y-6 group-hover:translate-0 duration-300 delay-100" />
                 <Link
                   to="#"
-                  className="bg-indigo-500 hover:bg-black text-white px-4 py-2 rounded-md font-medium transition-colors"
+                  className="text-xl border bg-violet-500 px-6 py-3 hover:bg-black w-full translate-y-6 group-hover:translate-0 duration-300 delay-150"
                 >
                   Buy Now
                 </Link>
-                <TiEyeOutline className="text-3xl p-2 bg-indigo-500 hover:bg-black text-white rounded-full cursor-pointer" />
+                <TiEyeOutline className="text-6xl border hover:bg-black px-2 bg-violet-500 translate-y-6 group-hover:translate-0 duration-300 delay-200" />
               </div>
             </div>
-
-            {/* Info */}
-            <div className="p-4 text-center">
-              <h3 className="font-medium text-gray-800 truncate">{item.title}</h3>
-              <div className="flex justify-center py-2 text-orange-400">
-                {[...Array(item.rating)].map((_, i) => (
-                  <CiStar key={i} />
-                ))}
-              </div>
-              <p className="text-gray-700 font-semibold">{item.price}</p>
+            <p>{item.product}</p>
+            <div className="flex py-2 justify-center text-xl text-orange-400">
+              {item.start}
+              {item.start}
+              {item.start}
+              {item.start}
             </div>
+            {item.price}
+            <div></div>
           </div>
         ))}
       </div>
