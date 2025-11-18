@@ -9,6 +9,7 @@ import Form from "./component/contact/form";
 import Shop from "./page/Shop";
 import About from "./page/About";
 import Redux from "./component/ReduxTodo";
+import ContactUs from "./page/contact_us";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/forgot" element={<Forgot />}/>
         <Route path="/shop" element={<Shop />}/>
         <Route path="/redux" element={<Redux/>}/>
+        <Route path="contact-us" element={<ContactUs />}/>
       </Routes>
     </BrowserRouter>
   );
