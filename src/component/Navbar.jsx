@@ -49,7 +49,7 @@ export default function Navbar() {
     {
       id: 5,
       page: "Contact Us",
-      path: null,
+      path: "/contact-us",
     },
   ];
   const user = [
