@@ -93,59 +93,58 @@ export default function ContactUs() {
 
         {/* Right: Form */}
         <main className="bg-white shadow-lg rounded-2xl p-8">
-          <form onSubmit={handleSubmit} noValidate>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit} noValidate className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <label className="block">
-                <span className="text-sm font-medium">Full name</span>
+                <span className="text-sm font-semibold text-gray-700">Full name</span>
                 <input
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  className={`mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 ${errors.name ? 'ring-2 ring-red-200' : ''}`}
+                  className={`mt-2 block w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm shadow-sm transition-all focus:bg-white focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 ${errors.name ? 'ring-2 ring-red-300 border-red-400' : ''}`}
                   placeholder="Your name"
                 />
                 {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
               </label>
 
               <label className="block">
-                <span className="text-sm font-medium">Email</span>
+                <span className="text-sm font-semibold text-gray-700">Email</span>
                 <input
                   name="email"
                   type="email"
                   value={form.email}
                   onChange={handleChange}
-                  className={`mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 ${errors.email ? 'ring-2 ring-red-200' : ''}`}
+                  className={`mt-2 block w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm shadow-sm transition-all focus:bg-white focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 ${errors.email ? 'ring-2 ring-red-300 border-red-400' : ''}`}
                   placeholder="you@example.com"
                 />
                 {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
               </label>
             </div>
 
-            <label className="block mt-4">
-              <span className="text-sm font-medium">Subject</span>
+            <label className="block">
+              <span className="text-sm font-semibold text-gray-700">Subject</span>
               <input
                 name="subject"
                 value={form.subject}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500"
+                className="mt-2 block w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm shadow-sm transition-all focus:bg-white focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500"
                 placeholder="Short summary"
               />
             </label>
 
-            <label className="block mt-4">
-              <span className="text-sm font-medium">Message</span>
+            <label className="block">
+              <span className="text-sm font-semibold text-gray-700">Message</span>
               <textarea
                 name="message"
                 value={form.message}
                 onChange={handleChange}
                 rows={6}
-                className={`mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 ${errors.message ? 'ring-2 ring-red-200' : ''}`}
+                className={`mt-2 block w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm shadow-sm transition-all focus:bg-white focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 ${errors.message ? 'ring-2 ring-red-300 border-red-400' : ''}`}
                 placeholder="Tell us what's on your mind"
               />
               {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
             </label>
 
-            {/* Honeypot field for bots - hide from users */}
             <input
               name="honey"
               value={form.honey}
@@ -155,20 +154,20 @@ export default function ContactUs() {
               autoComplete="off"
             />
 
-            <div className="mt-6 flex items-center gap-4">
+            <div className="pt-4 flex items-center gap-4">
               <button
                 type="submit"
-                className="inline-flex items-center justify-center px-6 py-2 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-300 disabled:opacity-60"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-xl bg-indigo-600 text-white text-sm font-semibold shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-300 disabled:opacity-60 transition-all"
                 disabled={status === 'sending'}
               >
                 {status === 'sending' ? 'Sending...' : 'Send message'}
               </button>
 
-              {status === 'success' && <p className="text-green-600">Thanks — we received your message.</p>}
-              {status === 'error' && <p className="text-red-600">Something went wrong. Try again later.</p>}
+              {status === 'success' && <p className="text-green-600 text-sm font-medium">Thanks — we received your message.</p>}
+              {status === 'error' && <p className="text-red-600 text-sm font-medium">Something went wrong. Try again later.</p>}
             </div>
 
-            <p className="mt-4 text-sm text-gray-500">By sending, you agree to our terms. We respect your privacy.</p>
+            <p className="text-xs text-gray-500">By sending, you agree to our terms. We respect your privacy.</p>
           </form>
         </main>
       </div>
