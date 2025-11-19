@@ -13,9 +13,9 @@ export default function Footer() {
       <ul className="flex flex-col gap-3 text-gray-500">
         <li className="text-black">ABOUT US</li>
         <Link to="/about">About us</Link>
-        <li>Store location</li>
-        <li>Contact</li>
-        <li>Order tracking</li>
+        <Link to="#">Store location</Link>
+        <Link to="/get-in-touch">Contact</Link>
+        <Link to="#">Order tracking</Link>
       </ul>
       <ul className="flex flex-col gap-3 text-gray-500">
         <li className="text-black">USEFUL LINKS</li>
