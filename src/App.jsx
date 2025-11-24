@@ -9,7 +9,7 @@ import Form from "./component/contact/form";
 import Shop from "./page/Shop";
 import About from "./page/About";
 import Redux from "./component/ReduxTodo";
-import ConnectUs from "./component/contact-us/Contact-us";
+import ConnectUs from "./page/contact-us";
 import GetInTouch from "./page/get_in_touch";
 function App() {
   const [count, setCount] = useState(0);
