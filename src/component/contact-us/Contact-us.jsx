@@ -6,7 +6,7 @@
 
 import React, { useState } from "react";
 
-export default function ContactUs() {
+export default function ConnectUs() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "", honey: "" });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState(null); // null | "sending" | "success" | "error"
