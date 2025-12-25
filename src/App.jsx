@@ -12,7 +12,6 @@ import Redux from "./component/ReduxTodo";
 import ConnectUs from "./page/contact-us";
 import GetInTouch from "./page/get_in_touch";
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <BrowserRouter>
